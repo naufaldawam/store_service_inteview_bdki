@@ -12,7 +12,7 @@ API yang perlu dibuat terdiri dari lima endpoint utama:
    - **Endpoint**: `/stock/addItem`
    - **Method**: `POST`
    - **Description**: Menambahkan stok barang baru.
-   - **Request Body**: Menggunakan DTO (Data Transfer Object).
+   - **Request Body**: Menggunakan DTO.
 
 2. **List Stock**
    - **Endpoint**: `/stock/getAll`
@@ -22,24 +22,24 @@ API yang perlu dibuat terdiri dari lima endpoint utama:
 3. **Detail Stock**
    - **Endpoint**: `/stock/getItem`
    - **Method**: `POST`
-   - **Description**: Mengambil detail informasi tentang stok barang berdasarkan ID.
+   - **Description**: Mengambil detail informasi tentang stok barang berdasarkan serial number dan nama barang`.
 
 4. **Update Stock**
-   - **Endpoint**: `/stock/stocks/{id}`
+   - **Endpoint**: `/stock/updateStockItem`
    - **Method**: `POST`
    - **Description**: Memperbarui informasi stok barang yang sudah ada.
    - **Request Body**: Menggunakan DTO.
 
 5. **Delete Stock**
-   - **Endpoint**: `/stock/stocks/{id}`
+   - **Endpoint**: `/stock/deletedStock`
    - **Method**: `POST`
-   - **Description**: Menghapus stok barang berdasarkan ID.
+   - **Description**: Menghapus stok barang.
 
 ## Data Structure
 
 Data yang perlu disimpan dalam API terdiri dari:
 
-- **IdBarang** (sequence)
+- **IdBarang** (identity)
 - **NamaBarang**
 - **JumlahStokBarang**
 - **NomorSeriBarang**
